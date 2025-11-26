@@ -37,7 +37,6 @@ public class DatabaseConduit {
 
     private boolean validate(UserRecord sender, UserRecord recipient, Transaction transaction) {
         if (sender == null || recipient == null) return false;
-        if (sender.getBalance() < transaction.getAmount()) return false;
-        return true;
+        return !(sender.getBalance() < transaction.getAmount());
     }
 }

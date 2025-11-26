@@ -27,7 +27,6 @@ public class TransactionRecord {
         this.amount = amount;
     }
 
-    // Getters and Setters are good practice, though not strictly required if not used
     public float getAmount() { return amount; }
     public UserRecord getSender() { return sender; }
     public UserRecord getRecipient() { return recipient; }
